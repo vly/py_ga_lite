@@ -6,14 +6,13 @@ setup(
     author='Val Lyashov',
     author_email='val@plstr.com',
     packages=['ga_lite', 'ga_lite.test'],
-    scripts=['bin/init_db.py'],
     url='http://pypi.python.org/pypi/ga_lite/',
     license='LICENSE.txt',
     description='A lite Google Analytics Data Export API library.',
     long_description=open('README.txt').read(),
     install_requires=[
-        "requests >= 0.11.0",
-        "pysqlite >= 2.0.0"
+        'requests >= 0.11.0',
+        'pysqlite >= 2.0.0'
     ],
     classifiers=(
         'Development Status :: 3 - Alpha',
