@@ -1,13 +1,12 @@
 import requests
-from bs4 import BeautifulSoup
 import json
 
 import af_db
 
 class GA:
-    def __init__(self):
+    def __init__(self, db_name="ga_lite_settings.db"):
         self.db = af_db.AF_DB()
-        self.settings = self.db.get_settings()
+        self.settings = self.db.get_settings(db_name)
         if self.settings["oauth_access_token"] is None:
             self.refresh_token()
         else:
